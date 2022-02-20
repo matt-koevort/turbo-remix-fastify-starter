@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "remix-app-template",
+  "version": "0.0.0",
   "description": "",
   "license": "",
   "dependencies": {
@@ -9,7 +10,8 @@
     "react-dom": "^17.0.2",
     "remix": "^1.2.1",
     "@remix-run/serve": "^1.2.1",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "ui": "workspace:*"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.2.1",
