@@ -1,26 +1,30 @@
 {
-  "name": "web",
-  "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "name": "remix-app-template",
+  "description": "",
+  "license": "",
   "dependencies": {
-    "next": "12.0.8",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "ui": "workspace:*"
+    "@remix-run/react": "^1.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.2.1",
+    "@remix-run/serve": "^1.2.1",
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
-    "config": "workspace:*",
-    "eslint": "7.32.0",
-    "next-transpile-modules": "9.0.0",
-    "tsconfig": "workspace:*",
-    "@types/node": "^17.0.12",
-    "@types/react": "17.0.37",
-    "typescript": "^4.5.3"
+    "@remix-run/dev": "^1.2.1",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "postinstall": "remix setup node",
+    "build": "cross-env NODE_ENV=production remix build",
+    "dev": "cross-env NODE_ENV=development remix dev",
+    "start": "cross-env NODE_ENV=production remix-serve build"
   }
 }
